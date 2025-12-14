@@ -1,0 +1,368 @@
+/* RESET DASAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; 
+    line-height: 1.6;
+    background-color: #f4f7f6; 
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* === GENERAL SECTION STYLES === */
+section {
+    padding: 100px 0; 
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #1a2a47;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 50px;
+    font-style: italic;
+}
+
+/* === HEADER & NAVIGATION STYLES === */
+.header {
+    background-color: #1a2a47; 
+    color: white;
+    padding: 15px 0;
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+.header ul {
+    list-style: none;
+    display: flex;
+}
+
+.header ul li {
+    margin-left: 25px;
+}
+
+.header ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.header ul li a:hover {
+    color: #5ac8fa; 
+}
+
+
+/* === PROFILE SECTION STYLES === */
+.profile-section {
+    background-color: #ffffff;
+}
+
+.profile-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+}
+
+.profile-text {
+    flex: 1;
+}
+
+.profile-text h2 {
+    text-align: left;
+    font-size: 3em;
+    color: #1a2a47;
+    margin-bottom: 5px;
+}
+
+.profile-text h3 {
+    text-align: left;
+    font-size: 1.5em;
+    color: #5ac8fa;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.profile-image-container {
+    flex: 0 0 300px; 
+}
+
+.profile-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%; 
+    border: 8px solid #5ac8fa;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #1a2a47;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #5ac8fa;
+    transform: translateY(-2px); 
+}
+
+
+/* === EXPERIENCE SECTION STYLES (INTI INTERAKSI HOVER) === */
+.experience-section {
+    background-color: #e6e9ee;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.experience-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease;
+    cursor: pointer; /* Kembali aktifkan pointer untuk klik */
+}
+
+.experience-item:hover {
+    transform: scale(1.05); 
+}
+
+.experience-item img {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+/* OVERLAY - Teks Penjelasan (Muncul saat hover) */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 42, 71, 0.9); 
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    opacity: 0; 
+    transition: opacity 0.5s ease;
+}
+
+.experience-item:hover .overlay {
+    opacity: 1; 
+}
+
+.overlay h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #5ac8fa;
+}
+
+.overlay p {
+    font-size: 0.9em;
+}
+
+
+/* === FOOTER & CONTACT STYLES === */
+.footer {
+    background-color: #1a2a47;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.footer h2 {
+    color: #5ac8fa; 
+    margin-bottom: 15px;
+}
+
+.social-links {
+    margin: 30px 0;
+}
+
+.social-links a {
+    color: white; 
+    font-size: 2.2em;
+    margin: 0 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px); 
+}
+
+/* Warna Kustom saat Hover */
+.social-links a:hover .fa-instagram { color: #E1306C; }
+.social-links a:hover .fa-tiktok { color: #69C9D0; }
+.social-links a:hover .fa-facebook-f { color: #1877F2; }
+.social-links a:hover .fa-envelope { color: #FFD700; }
+.social-links a:hover .fa-phone { color: #4CAF50; }
+
+.phone-display {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    margin-top: 20px;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+/* =================================== */
+/* === MODAL/LIGHTBOX STYLES (NEW) === */
+/* =================================== */
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 2000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8); 
+    padding-top: 60px;
+    animation: fadeIn 0.5s;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; 
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px; /* Lebar lebih sempit untuk fokus teks */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    position: relative;
+    /* Hapus display: flex; karena tidak ada foto */
+}
+
+.modal-text h3 {
+    color: #1a2a47;
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-align: center; /* Teks judul di tengah */
+}
+
+.modal-text .period {
+    color: #5ac8fa;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center; /* Teks periode di tengah */
+}
+
+.modal-text p {
+    margin-bottom: 15px;
+    color: #555;
+    text-align: justify; /* Deskripsi diratakan penuh */
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Animasi Fade In */
+@keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
+/* === MEDIA QUERIES (RESPONSIVE DESIGN) === */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .header ul {
+        margin-top: 10px;
+    }
+    .header ul li {
+        margin: 0 10px;
+    }
+    .profile-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .profile-image-container {
+        order: -1; 
+        margin-bottom: 30px;
+    }
+    .profile-text h2, .profile-text h3 {
+        text-align: center;
+    }
+    .profile-text h2 {
+        font-size: 2.5em;
+    }
+    
+    /* Responsif untuk Modal */
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+        padding: 20px;
+    }
+    .modal-text h3 {
+        font-size: 1.5em;
+    }
+}
